@@ -8,6 +8,7 @@ const port: number = 3000;
 
 
 // 設定
+app.use(express.json()); // 追加：JSON形式のリクエストボディをパースする
 app.use(express.urlencoded({ extended: true })); // POST通信設定
 app.use(express.static(path.join(__dirname, 'public'))); // 静的ファイルの指定
 app.set('view engine', 'ejs'); // テンプレートエンジンにEJSを設定
